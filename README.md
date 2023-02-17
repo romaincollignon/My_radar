@@ -1,5 +1,5 @@
 
-![Logo](https://myradar.com/static/myradar-30e56008f245ea5f8de43788ff7f0589.png)
+![Logo](http://store-images.s-microsoft.com/image/apps.1764.9007199266248813.b671917a-1b67-457d-b4c7-82a6cb0a1db7.e8dc0ce7-5d5d-4fce-a094-9e3ced475daa)
 
 
 ## :rocket: Introduction
