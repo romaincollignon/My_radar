@@ -1,0 +1,42 @@
+#!/bin/python3
+
+import sys
+import random
+
+f = open("generated_script.rdr", "w")
+if (len(sys.argv) == 1):
+    print("Usage: ./generate_script.py PLANES TOWERS")
+    planes = 0
+    towers = 0
+elif (len(sys.argv) == 2):
+    print("Usage: ./generate_script.py PLANES TOWERS")
+    print("TOWERS not specified, defaulting to 0")
+    planes = int(sys.argv[1])
+    towers = 0
+else:
+    planes = int(sys.argv[1])
+    towers = int(sys.argv[2])
+for i in range(0, planes):
+    f.write(
+        "A "
+        + str(random.randint(0, 1920)) # Departure x- coordinate
+        + " "
+        + str(random.randint(0, 1080)) # Departure y- coordinate
+        + " "
+        + str(random.randint(0, 1920)) # Arrival x- coordinate
+        + " "
+        + str(random.randint(0, 1080)) # Arrival y- coordinate
+        + " "
+        + str(random.randint(50, 150)) # Speed (in pixel per second)
+        + " "
+        + str(random.randint(0, 10)) # Delay (in seconds)
+        + "\n")
+for i in range(0, towers):
+    f.write(
+        "T "
+        + str(random.randint(0, 1920)) # x- coordinate
+        + " "
+        + str(random.randint(0, 1080)) # y- coordinate
+        + " "
+        + str(random.randint(1, 100)) # Radius
+        + "\n")
